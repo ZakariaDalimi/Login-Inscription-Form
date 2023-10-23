@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style_login.css">
+
+   <title>Document</title>
+    <style>
+         body{
+            background-color: #40b2de;
+            height: 100%;
+         }
+    </style>
+</head>
+<body>
+
+    
+   <section class="section" >
+    <div class="wrapper" style="height: 592px;">
+        
+        <div class="logreg-box">
+            <!-- login form  -->
+            <div class="form-box login">
+                <div class="logreg-title">
+                    <h2>Login</h2>
+                    <p>Please login to use the platform</p>
+                </div>
+
+                <form action="insert-login.php" method="post">
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-envelope'></i></span>
+                        <input type="text" name="mail"  required>
+                        <label  onblur="funcBlur()" >Email</label>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                        <input type="password" name="pw" id="pw" required>
+                        <label for="pw" onblur="funcBlur()" >Password</label>
+                    </div>
+
+                    <div class="remember-forgot">
+                        <label><input type="checkbox">
+                            Remember me</label>
+                        <a href="#">Forgot password?</a>
+                    </div>
+
+
+                    <button type="submit" name="ok" class="btn">Login</button>
+
+                    <div class="logreg-link">
+                        <p>Don't have an account? 
+                            <a href="#" onclick="register()" class="register-link">Register</a></p>
+                    </div>
+                </form>
+            </div>
+
+
+            <!-- Register form -->
+            <div class="form-box register">
+                <div class="logreg-title">
+                    <h2>Registration</h2>
+                    <p>Please provide the following to verify your identity</p>
+                </div>
+
+                <form action="insert-register.php" method="post">
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-user'></i></span>
+                        <label onblur="funcBlur()"></label>
+                        <input type="text" name="name" required>
+                        <label onblur="funcBlur()"  >Full Name</label>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-phone' ></i></span>
+                        <input type="tel" name="tel" required>
+                        <label onblur="funcBlur()" >Phone</label>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-envelope'></i></span>
+                        <input type="text" name="mail" required>
+                        <label onblur="funcBlur()">Email</label>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                        <input type="password" name="pw" required> 
+                        <label onblur="funcBlur()" >Password</label>
+                    </div>
+
+                    <div class="remember-forgot">
+                        <label><input type="checkbox">
+                            I agree to the term & conditions</label>
+                    </div>
+
+
+                    <button type="submit" name="register" class="btn">Register</button>
+
+                    
+                    <div class="logreg-link">
+                        <p>Already have an account? 
+                            <a href="" onclick="login()" class="login-link">Login</a></p>
+                    </div>
+                </form>
+            </div >
+        </div>
+    </div>
+   </section>
+
+<script src="main_login.js"></script>
+
+</body>
+</html>
